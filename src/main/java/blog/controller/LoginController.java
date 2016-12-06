@@ -34,10 +34,11 @@ public class LoginController {
             notificationService.addErrorMessage("Please fill the form correctly!");
             return "users/login";
         }
+        /**
         if (!userService.authenticate(loginForm.getUsername(), loginForm.getPassword())) {
             notificationService.addErrorMessage("Invalid login!");
             return "users/login";
-        }
+        }*/
 
         notificationService.addInfoMessage("Login successfully");
         return "redirect:/";
