@@ -2,7 +2,7 @@
 
 
 TODOS:
-- [ ] get all posts(posts view)
+- [x] list all posts(posts view)
 - [ ] create a post
 - [ ] delete a post
 - [ ] register
