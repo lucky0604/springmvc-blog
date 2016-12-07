@@ -19,8 +19,11 @@ public class Post {
     @Lob @Column(nullable = false)
     private String body;
 
+
     @ManyToOne(optional = false, fetch = FetchType.LAZY)
     private User author;
+
+
 
     @Column(nullable = false)
     private Date date = new Date();
@@ -34,6 +37,7 @@ public class Post {
         this.author = author;
     }
 
+
     @Override
     public String toString() {
         return "Post{" +
@@ -44,6 +48,7 @@ public class Post {
                 ", date=" + date +
                 '}';
     }
+
 
     public Long getId() {
         return id;

@@ -24,8 +24,10 @@ public class User {
     @Column(length = 100)
     private String fullName;
 
+
     @OneToMany(mappedBy = "author")
     private Set<Post> posts = new HashSet<>();
+
 
     public User() {};
     public User(Long id, String username, String fullName) {
@@ -33,6 +35,7 @@ public class User {
         this.username = username;
         this.fullName = fullName;
     }
+
 
     @Override
     public String toString() {
@@ -44,6 +47,7 @@ public class User {
                 ", posts=" + posts +
                 '}';
     }
+
 
     public Long getId() {
         return id;
@@ -77,6 +81,7 @@ public class User {
         this.fullName = fullName;
     }
 
+
     public Set<Post> getPosts() {
         return posts;
     }
@@ -84,4 +89,5 @@ public class User {
     public void setPosts(Set<Post> posts) {
         this.posts = posts;
     }
+
 }
