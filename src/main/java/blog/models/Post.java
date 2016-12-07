@@ -20,9 +20,6 @@ public class Post {
     private String body;
 
 
-    @ManyToOne(optional = false, fetch = FetchType.LAZY)
-    private User author;
-
 
 
     @Column(nullable = false)
@@ -30,11 +27,10 @@ public class Post {
 
     public Post(){};
 
-    public Post(Long id, String title, String body, User author) {
+    public Post(Long id, String title, String body) {
         this.id = id;
         this.title = title;
         this.body = body;
-        this.author = author;
     }
 
 
@@ -44,7 +40,6 @@ public class Post {
                 "id=" + id +
                 ", title='" + title + '\'' +
                 ", body='" + body + '\'' +
-                ", author=" + author +
                 ", date=" + date +
                 '}';
     }
@@ -72,14 +67,6 @@ public class Post {
 
     public void setBody(String body) {
         this.body = body;
-    }
-
-    public User getAuthor() {
-        return author;
-    }
-
-    public void setAuthor(User author) {
-        this.author = author;
     }
 
     public Date getDate() {

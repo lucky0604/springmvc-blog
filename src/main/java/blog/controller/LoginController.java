@@ -2,7 +2,6 @@ package blog.controller;
 
 import blog.forms.LoginForm;
 import blog.services.NotificationService;
-import blog.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
@@ -17,8 +16,6 @@ import javax.validation.Valid;
 @Controller
 public class LoginController {
 
-    @Autowired
-    private UserService userService;
 
     @Autowired
     private NotificationService notificationService;
